@@ -1,14 +1,10 @@
 import 'dart:convert';
 
-import 'package:news_app/models/newsarticle.dart';
 import 'package:http/http.dart' as http;
-
-
+import 'package:news_app/models/newsarticle.dart';
 
 class NewsApiService {
-  static const String _apiKey = 'YOUR_API_KEY'; // Replace this
-  static const String _url =
-      'https://newsapi.org/v2/top-headlines?country=us&apiKey=$_apiKey';
+  static const String _url = 'https://mocki.io/v1/3c3df97e-3aa5-4121-9ff0-648f1e5be17d';
 
   static Future<List<NewsArticle>> fetchNewsArticles() async {
     final response = await http.get(Uri.parse(_url));
